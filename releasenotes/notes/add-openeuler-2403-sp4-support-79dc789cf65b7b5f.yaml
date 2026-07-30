@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Restores openEuler host support using distribution-provided Docker and
+    Python bindings required by openEuler 24.03 LTS SP4.

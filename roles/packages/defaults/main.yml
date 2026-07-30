@@ -13,6 +13,10 @@ ubuntu_pkg_install:
  - "{% if enable_multipathd | bool %}sg3-utils-udev{% endif %}"
  - tzdata
 
+openeuler_pkg_install:
+ - python3-dbus
+ - python3-docker
+
 redhat_pkg_install:
  - git
  - iputils
