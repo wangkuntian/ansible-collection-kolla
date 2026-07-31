@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Uses the openEuler ``moby-engine`` package for Docker hosts instead of the
+    lower-version ``docker`` package.

@@ -22,7 +22,9 @@ docker_yum_url: "https://download.docker.com/linux/centos"
 docker_yum_baseurl: "{{ docker_yum_url }}/$releasever/$basearch/stable"
 docker_yum_gpgkey: "{{ docker_yum_url }}/gpg"
 docker_yum_gpgcheck: true
-docker_yum_package_name: "{{ 'docker' if ansible_facts.distribution == 'openEuler' else 'docker-ce' }}"
+docker_yum_package_name: >-
+  {{ 'moby' if ansible_facts.distribution == 'openEuler'
+  else 'docker-ce' }}
 docker_yum_package: >-
   {{ docker_yum_package_name }}{{ '-' + docker_yum_package_pin
   if (docker_yum_package_pin | length > 0) else '' }}
